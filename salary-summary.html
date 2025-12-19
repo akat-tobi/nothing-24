@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="fade-in">
+
+<div class="navbar">
+  <a href="/dashboard">Home</a>
+  <a href="/employee">Employee</a>
+  <a href="/salary-tier">Salary</a>
+  <a href="/salary-summary">Summary</a>
+  <a href="/logout">Logout</a>
+</div>
+
+<h2 style="text-align:center; color:white;">Salary Summary</h2>
+
+<table>
+<tr>
+<th>Id</th>
+  <th>Name</th>
+  <th>Tier</th>
+  <th>Basic</th>
+  <th>HRA</th>
+  <th>Allowances</th>
+</tr>
+
+{% for s in salary %}
+<tr>
+  <td>{{ s[0] }}</td>
+  <td>{{ s[1] }}</td>
+  <td>{{ s[2] }}</td>
+  <td>{{ s[3] }}</td>
+  <td>{{ s[4] }}</td>
+  <td>{{ s[5] }}</td>
+    <td>
+        <form action="/delete-employee/{{ s[0] }}" method="POST">
+            <button class="delete-btn">Delete</button>
+        </form>
+    </td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

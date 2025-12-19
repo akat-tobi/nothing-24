@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - HR Salary System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .password-box {
+            position: relative;
+            width: 100%;
+        }
+        
+        .password-box input {
+            width: 90%;
+            padding-right: 40px;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>HR Salary Structure Login</h2>
+
+    {% if error %}
+        <p style="color:red; font-weight:bold;">{{ error }}</p>
+    {% endif %}
+
+    <form method="post">
+
+        <input type="text" name="username" placeholder="Enter Username" required>
+
+        <!-- PASSWORD + EYE ICON -->
+        <div class="password-box">
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            
+            <!-- Eye Icon Image -->
+            <img id="eyeIcon"
+                 src="{{ url_for('static', filename='eye-close.png') }}"
+                 class="eye-icon"
+                 onclick="togglePassword()">
+        </div>
+
+        <button type="submit">Login</button>
+
+        <a href="/forget-password">Forgot Password?</a>
+    </form>
+
+</div>
+
+<!-- ======================= -->
+<!--  PASSWORD TOGGLE SCRIPT -->
+<!-- ======================= -->
+<script>
+function togglePassword() {
+    let pwd = document.getElementById("password");
+    let eye = document.getElementById("eyeIcon");
+
+    if (pwd.type === "password") {
+        pwd.type = "text";  
+        eye.src = "{{ url_for('static', filename='eye-open.png') }}"; // open
+    } else {
+        pwd.type = "password";
+        eye.src = "{{ url_for('static', filename='eye-close.png') }}"; // close
+    }
+}
+</script>
+
+</body>
+</html>

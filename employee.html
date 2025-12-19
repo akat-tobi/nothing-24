@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="fade-in">
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="/dashboard">Home</a>
+    <a href="/employee">Employee</a>
+    <a href="/salary-tier">Salary</a>
+    <a href="/salary-summary">Summary</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="container">
+    <h2>Add Employee</h2>
+
+    <form method="post" id="empForm">
+        <input type="text" name="name" placeholder="Employee Name" required>
+        <input type="text" name="role" placeholder="Employee Role" required>
+        <input type="number" name="tier" placeholder="Tier (Ex: 1, 2, 3)" required>
+        <button type="submit">Add Employee</button>
+    </form>
+</div>
+
+<!-- ENTER KEY HANDLER -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll("#empForm input");
+    const form = document.getElementById("empForm");
+
+    inputs.forEach((input, index) => {
+        input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+
+                if (index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                } else {
+                    form.submit();
+                }
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
