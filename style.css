@@ -1,0 +1,209 @@
+body {
+font-size: 28px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #667eea, #764ba2);
+}
+
+.container {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    margin: 100px auto;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    width: 95%;
+    padding: 12px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+table {
+font-size: 28px;
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background: #667eea;
+    color: white;
+}
+.navbar {
+    background: #1e1e60;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: yellow;
+}
+
+/* Animation */
+.fade-in {
+    animation: fade 0.8s ease-in;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover Effect */
+.container:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+/* ✅ TOP NAVIGATION BAR STYLE */
+.navbar {
+    background: #1e1e60;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: yellow;
+}
+/* Increase entire employee page font size */
+body, .container, input, button, h2 {
+    font-size: 22px !important;
+}
+/* Increase the full Employee page size */
+body {
+    font-size: 26px !important;
+}
+
+/* Make inputs and buttons bigger */
+.container input,
+.container button {
+    font-size: 24px !important;
+    padding: 16px !important;
+}
+
+/* Make the title bigger */
+.container h2 {
+    font-size: 32px !important;
+    font-weight: bold;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 22px;
+    font-size: 26px;   /* ⬆ Bigger font */
+    font-weight: bold;
+}
+.dashboard-container {
+    font-size: 26px !important;  
+}
+.dashboard-container h2 {
+    font-size: 34px !important;
+    font-weight: bold;
+}
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    width: 100%;
+    padding-right: 40px; /* space for eye */
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+}
+/* Increase entire employee page font size */
+body, .container, input, button, h2 {
+    font-size: 22px !important;
+}
+
+/* Make login/reset container big and centered */
+.container {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    margin: 100px auto;  /* Centering */
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Increase inputs & button */
+.container input,
+.container button {
+    font-size: 24px !important;
+    padding: 16px !important;
+}
+
+/* Title size */
+.container h2 {
+    font-size: 32px !important;
+    font-weight: bold;
+}
+/* Login Page Background Image */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../static/salary-bg.png') no-repeat center center fixed;
+    background-size: cover;
+}
